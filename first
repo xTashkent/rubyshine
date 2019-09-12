@@ -1,1 +1,23 @@
-puts "Hello World!"
+print "Введіть температурну шкалу (С or F):"
+str = gets
+exit if str.nil? or str.empty?
+str.chomp!
+temp, scale =str.split(" ")
+
+abort "#{str} недопустиме число" if str !~ /-?\d+/
+
+temp = temp.to_f
+case scale
+when "C","c"
+  f = 1.8*temp + 32
+when "F", "f"
+  c = (5.0/9.0)*(temp-32)
+else
+  abort "необхідно задати С або F"
+end
+
+if f.nil?
+  puts "#{c} градусів С"
+else
+  puts "#{c} градусів С"
+end
