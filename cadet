@@ -1,0 +1,14 @@
+class Cadet
+  def initialize(age, group, name, haveChildren)
+    @cad_age = age
+    @cad_gr = group
+    @cad_name = name
+    @cad_haveChild = haveChildren
+  end
+
+  def showinfo
+    puts "(int=) #{@cad_age}, (float=)  #{@cad_gr}, (string=)  #{@cad_name}, (boolean=) #{@cad_haveChild}"
+  end
+end
+cadet = Cadet.new("21", "27.02", "Berkovichshc", "false")
+cadet.showinfo()
